@@ -5,10 +5,7 @@ package calculadora;
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
-/**
- *
- * @author linux
- */
+
 public class calc extends javax.swing.JFrame {
 
     int num1 , num2;
