@@ -1,15 +1,10 @@
 package calculadora;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-
-
 public class calc extends javax.swing.JFrame {
 
     int num1 , num2;
     char signo;
+    String pantalla = "0";
     
     /**
      * Creates new form calc
@@ -57,6 +52,7 @@ public class calc extends javax.swing.JFrame {
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel1.setText(pantalla);
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jButton1.setText("2");
@@ -120,6 +116,11 @@ public class calc extends javax.swing.JFrame {
         jButton15.setText("%");
 
         jButton16.setText("c");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
 
         jButton17.setText("=");
         jButton17.addActionListener(new java.awt.event.ActionListener() {
@@ -240,7 +241,14 @@ public class calc extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-   // TODO add your handling code here:
+    if(pantalla == "0"){
+    pantalla = "1";
+    jLabel1.setText(pantalla);
+    } else {
+    pantalla += "1";
+    jLabel1.setText(pantalla);    
+    }
+
    
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -268,8 +276,19 @@ public class calc extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+    if(pantalla == "0"){
+    pantalla = "2";
+    jLabel1.setText(pantalla);
+    } else {
+    pantalla += "2";
+    jLabel1.setText(pantalla);    
+    }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+    pantalla = "0";
+    jLabel1.setText(pantalla);
+    }//GEN-LAST:event_jButton16ActionPerformed
 
     /**
      * @param args the command line arguments
