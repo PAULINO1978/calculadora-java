@@ -12,13 +12,7 @@ public class calc extends javax.swing.JFrame {
     double num2;
     String signo;
   
-   public class stack {
 
-
-      /**
-        */
-      
-   }
     public calc() {
         initComponents();
     }
